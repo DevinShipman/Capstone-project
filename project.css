@@ -557,6 +557,29 @@ td li {
     width: 95%;
   }
 }
+/* VIDEO SECTION */
+video-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.video-container iframe {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9; /* 🔑 makes it responsive */
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  border: none;
+}
 
 /* Footer */
 footer {
