@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>U.S. Aircraft Technology</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | Military Technology</title>
   <link rel="stylesheet" href="project.css">
 </head>
 
@@ -26,6 +27,7 @@
       <li><a href="future-innovations.html">Future Innovations</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="resources.html">Resources</a></li>
+      <li><a href="products.html">Shop</a></li>
     </ul>
   </nav>
 
@@ -37,15 +39,15 @@
     </section>
 
     <div class="filters">
-      <a href="#all" class="btn">All</a>
-      <a href="#model-kits" class="btn">Model Kits</a>
-      <a href="#books" class="btn">Books</a>
-      <a href="#collectibles" class="btn">Collectibles</a>
+      <button class="btn filter-btn active" data-filter="all">All</button>
+      <button class="btn filter-btn active" data-filter="model-kits">Model Kits</button>
+      <button class="btn filter-btn active" data-filter="books">Books</button>
+      <button class="btn filter-btn active" data-filter="collectibles">Collectibles</button>
     </div>
 
     <section class="product-grid">
 
-      <div class="product-card">
+      <div class="product-card" data-category="model-kits">
         <img src="images/P-40B_Model_Kit.jpg" alt="P-40B Tiger Shark Model Kit">
         <h3>P-40B Tiger Shark Model Kit</h3>
         <p>Revell 1:48 scale Fighter Plane Model Kit</p>
@@ -59,7 +61,7 @@
         </form>
       </div>
 
-      <div class="product-card">
+      <div class="product-card" data-category="model-kits">
         <img src="images/F22_Model_Kit.jpg" alt="F-22 Model Kit">
         <h3>F-22 Raptor Model Kit</h3>
         <p>Revell 1:48 scale F-22 Raptor model kit.</p>
@@ -73,7 +75,7 @@
         </form>
       </div>
 
-      <div class="product-card">
+      <div class="product-card" data-category="model-kits">
         <img src="images/B52_Model_Kit.jpg" alt="B-52 Mitchell Bomber Model Kit">
         <h3>B-52 Mitchell Bomber Model Kit</h3>
         <p>Revell Assorted B-52 Mitchell Bomber Plane</p>
@@ -87,7 +89,7 @@
         </form>
       </div>
 
-      <div class="product-card">
+      <div class="product-card" data-category="model-kits">
         <img src="images/USS_Missouri_Model_Kit.jpg" alt="USS Missouri Model Kit">
         <h3>USS Missouri Model Kit</h3>
         <p>Revell 1:565 Scale USS Missouri "The Mighty Mo"</p>
@@ -101,7 +103,7 @@
         </form>
       </div>
 
-      <div class="product-card">
+      <div class="product-card" data-category="model-kits">
         <img src="images/USS_EnterpriseCV6_Model_Kit.jpg" alt="USS Enterprise CV6 Aircraft Carrier Model Kit">
         <h3>USS Enterprise CV6 Model Kit</h3>
         <p>Sprue Brothers 1:700 Scale USS Enterprise CV6 Aircraft Carrier Model Kit </p>
@@ -115,7 +117,7 @@
         </form>
       </div>
 
-      <div class="product-card">
+      <div class="product-card" data-category="model-kits">
         <img src="images/USS_Arleigh_Bruke_Destroyer_Model_Kit.jpg" alt="USS Arleigh Bruke Class Destroyer Model Kit">
         <h3>USS Arleigh Bruke Class Destroyer Model Kit</h3>
         <p>Sprue Brothers 1:350 Scale USS Arleigh Bruke Class Destroyer Model Kit</p>
@@ -129,10 +131,10 @@
         </form>
       </div>
 
-      <div class="product-card">
+      <div class="product-card" data-category="model-kits">
         <img src="images/Humvee_Model_Kit.jpg" alt="Humvee Model Kit">
         <h3>Humvee Armored Vehicle Model Kit</h3>
-        <p>Sprue Borthers 1:35 Scale Humvee Armored Vehicle</p>
+        <p>Sprue Brothers 1:35 Scale Humvee Armored Vehicle</p>
         <span class="price">$49.99</span>
         <form method="get" action="https://www.aitsafe.com/cf/add.cfm">
           <input type="hidden" name="userid" value="19113265">
@@ -143,10 +145,10 @@
         </form>
       </div>
 
-      <div class="product-card">
+      <div class="product-card" data-category="model-kits">
         <img src="images/M2_BradleyIFV_Model_Kit.jpg" alt="M2 Bradley IFV Model Kit">
         <h3>M2 Bradley Infantry Fighting Vehicle</h3>
-        <p>Sprue Borthers 1:35 Scale M2 Bradley Infantry Fighting Vehicle</p>
+        <p>Sprue Brothers 1:35 Scale M2 Bradley Infantry Fighting Vehicle</p>
         <span class="price">$39.99</span>
         <form method="get" action="https://www.aitsafe.com/cf/add.cfm">
           <input type="hidden" name="userid" value="19113265">
@@ -157,10 +159,10 @@
         </form>
       </div>
 
-      <div class="product-card">
+      <div class="product-card" data-category="model-kits">
         <img src="images/M1A1_Abrams_Model_Kit.jpg" alt="M1A1 Abrams Model Kit">
         <h3>M1A1 Abrams Main Battle Tank</h3>
-        <p>Sprue Borthers 1:72 Scale M1A1 Abrams Main Battle Tank Model Kit</p>
+        <p>Sprue Brothers 1:72 Scale M1A1 Abrams Main Battle Tank Model Kit</p>
         <span class="price">$15.99</span>
         <form method="get" action="https://www.aitsafe.com/cf/add.cfm">
           <input type="hidden" name="userid" value="19113265">
@@ -171,7 +173,7 @@
         </form>
       </div>
 
-      <div class="product-card">
+      <div class="product-card" data-category="books">
         <img src="images/World_War_2_KidsBook.jpg" alt="Scholastic Discover More: World War II">
         <h3>Scholastic Discover More: World War II</h3>
         <p>Scholastic Discover More: World War II by Sean Callery (2013) is a 112-page nonfiction childrens book that
@@ -186,7 +188,25 @@
         </form>
       </div>
 
-      <div class="product-card">
+      <div class="product-card" data-category="books">
+        <img src="images/The_Making_Of_The_Atomic_Bomb.jpg"
+          alt="The Making of the Atomic Bomb: 25th Anniversary Edition">
+        <h3>The Making of the Atomic Bomb: 25th Anniversary Edition</h3>
+        <p>The Making of the Atomic Bomb: 25th Anniversary Edition by Richard Rhodes is a detailed, Pulitzer
+          Prize winning nonfiction book that explores the
+          scientific discoveries, historical events, and political decisions that led to the creation of the atomic bomb
+          during the Manhattan Project and World War II. </p>
+        <span class="price">$275.00</span>
+        <form method="get" action="https://www.aitsafe.com/cf/add.cfm">
+          <input type="hidden" name="userid" value="19113265">
+          <input type="hidden" name="product" value="The Making of the Atomic Bomb: 25th Anniversary Edition">
+          <input type="hidden" name="price" value="275.00">
+          <input type="hidden" name="qty" value="1">
+          <input type="submit" value="Add to Cart" class="btn">
+        </form>
+      </div>
+
+      <div class="product-card" data-category="books">
         <img src="images/Technology_And_The_American_Way_Book.jpg"
           alt="Technology And The American Way Of War Since 1945">
         <h3>Technology And The American Way Of War Since 1945</h3>
@@ -203,7 +223,24 @@
         </form>
       </div>
 
-      <div class="product-card">
+      <div class="product-card" data-category="books">
+        <img src="images/US_Military_Aircraft_Since_1909.jpg" alt="United States Military Since 1909">
+        <h3>United States Military Since 1909</h3>
+        <p>United States Military Aircraft Since 1909 by Gordon Swanborough & Peter M. Bowers is a comprehensive
+          nonfiction reference cataloguing the full history of American military aviation from its earliest origins
+          through the modern era, covering every aircraft type procured by U.S. armed forces.</p>
+        <span class="price">$90.00</span>
+        <form method="get" action="https://www.aitsafe.com/cf/add.cfm">
+          <input type="hidden" name="userid" value="19113265">
+          <input type="hidden" name="product" value="United States Military Since 1909">
+          <input type="hidden" name="price" value="90.00">
+          <input type="hidden" name="qty" value="1">
+          <input type="submit" value="Add to Cart" class="btn">
+        </form>
+      </div>
+
+
+      <div class="product-card" data-category="books">
         <img src="images/Electronic_Warfare_Systems.jpg"
           alt="Electronic Warfare Systems: Volume II: Platforms, Integration and Future Trends">
         <h3>Electronic Warfare Systems: Volume II: Platforms, Integration and Future Trends</h3>
@@ -222,7 +259,7 @@
         </form>
       </div>
 
-      <div class="product-card">
+      <div class="product-card" data-category="books">
         <img src="images/The_Kill_Chain.jpg" alt="The Kill Chain">
         <h3>The Kill Chain: Defending America in the Future of High-Tech Warfare </h3>
         <p>The Kill Chain: Defending America in the Future of High-Tech Warfare by Christian Brose is a 320-page
@@ -242,8 +279,8 @@
         </form>
       </div>
 
-      <div class="product-card">
-        <img src="images/Purple_Heart_Collectible.jpg" alt="Purple Heart Collectible">
+      <div class="product-card" data-category="collectibles">
+        <img src="images/Purple_Heart_Collectible.jpg" alt="Purple Heart Medal">
         <h3>Purple Heart Collectible Medal</h3>
         <p>The Purple Heart Medal is one of the oldest U.S. military honors, originally established in 1782 by George
           Washington and officially reestablished in 1932. It is awarded to U.S. service members who are wounded or
@@ -258,8 +295,8 @@
         </form>
       </div>
 
-      <div class="product-card">
-        <img src="images/Medal_Of_Honor_Collectible.jpg" alt="Medal of Honor Collectible">
+      <div class="product-card" data-category="collectibles">
+        <img src="images/Medal_Of_Honor_Collectible.jpg" alt="Medal of Honor">
         <h3>Medal of Honor Collectible</h3>
         <p>The Medal of Honor is the highest U.S. military decoration, awarded to service members who display
           extraordinary valor and heroism in combat at the risk of their own lives. Established during the Civil War in
@@ -274,8 +311,8 @@
         </form>
       </div>
 
-      <div class="product-card">
-        <img src="images/Silver_Star_Medal.jpg" alt="Silver Star Medal Collectible">
+      <div class="product-card" data-category="collectibles">
+        <img src="images/Silver_Star_Medal.jpg" alt="Silver Star Medal">
         <h3>Silver Star Medal Collectible</h3>
         <p>The Silver Star Medal Collectible represents one of the highest U.S. military awards for valor in combat,
           originally established in 1932 and awarded for acts of gallantry against enemy forces.This detailed replica
@@ -291,8 +328,8 @@
         </form>
       </div>
 
-      <div class="product-card">
-        <img src="images/Bronze_Star_Medal_Collectible.jpg" alt="Bronze Star Medal Collectible">
+      <div class="product-card" data-category="collectibles">
+        <img src="images/Bronze_Star_Medal_Collectible.jpg" alt="Bronze Star Medal">
         <h3>Bronze Star Medal Collectible</h3>
         <p>The Bronze Star Medal Collectible represents one of the United States’ most respected military decorations,
           originally established in 1944 and awarded for heroic or meritorious service in a combat zone. This finely
@@ -309,6 +346,86 @@
         </form>
       </div>
 
-    </section>
+      <div class="product-card" data-category="collectibles">
+        <img src="images/Distinguished_Flying_Cross_Collectible.jpg" alt="Distinguished Flying Cross Medal">
+        <h3>Distinguished Flying Cross Medal Collectible</h3>
+        <p>The Distinguished Flying Cross Collectible represents one of the United States' most prestigious military
+          decorations, originally established in 1926 and awarded for heroism or extraordinary achievement while
+          participating in aerial flight. This finely crafted replica honors the courage and skill of American
+          aviators across every major conflict from World War II to the modern era, making it a distinguished
+          addition for collectors passionate about the legacy of U.S. military aviation history.
+        </p>
+        <span class="price">$45.00</span>
+        <form method="get" action="https://www.aitsafe.com/cf/add.cfm">
+          <input type="hidden" name="userid" value="19113265">
+          <input type="hidden" name="product" value="Distinguished Flying Cross Medal Collectible">
+          <input type="hidden" name="price" value="45.00">
+          <input type="hidden" name="qty" value="1">
+          <input type="submit" value="Add to Cart" class="btn">
+        </form>
+      </div>
 
+      <div class="product-card" data-category="collectibles">
+        <img src="images/Global_War_On_Terror_Medal.jpg" alt="Global War On Terror Medal">
+        <h3>Global War On Terror Medal Collectible</h3>
+        <p>The U.S. military Global War on Terror Service Medal is awarded to American service members who served in
+          support
+          of Operation Enduring Freedom and Operation Iraqi Freedom, honoring the dedication and sacrifice of those who
+          answered the call following September 11, 2001.</p>
+        <span class="price">$25.00</span>
+        <form method="get" action="https://www.aitsafe.com/cf/add.cfm">
+          <input type="hidden" name="userid" value="19113265">
+          <input type="hidden" name="product" value="Distinguished Flying Cross Medal Collectible">
+          <input type="hidden" name="price" value="25.00">
+          <input type="hidden" name="qty" value="1">
+          <input type="submit" value="Add to Cart" class="btn">
+        </form>
+      </div>
+    </section>
   </main>
+  
+  <script src="script.js"></script>
+
+  <footer>
+    <div class="footer-container">
+
+      <div class="footer-section">
+        <p><strong>Quick Links</strong></p>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="timeline.html">Timeline</a></p>
+        <p><a href="navy.html">Navy</a></p>
+        <p><a href="aviation.html">Aviation</a></p>
+        <p><a href="armored-vehicles.html">Armored Vehicles</a></p>
+        <p><a href="missile-systems.html">Missile Systems</a></p>
+        <p><a href="cyber-warfare.html">Cyber Warfare</a></p>
+        <p><a href="future-innovations.html">Future Innovations</a></p>
+      </div>
+
+      <div class="footer-section">
+        <p><strong>About</strong></p>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="timeline.html">About This Site</a></p>
+      </div>
+
+      <div class="footer-section">
+        <p><strong>Resources</strong></p>
+        <p><a href="resources.html">References</a></p>
+        <p><a href="mailto:ds00318@my.westga.edu">Contact Me</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-copyright">
+      <p>Copyright &copy; Devin Shipman</p>
+      <p><a href="mailto:ds00318@my.westga.edu">ds00318@my.westga.edu</a></p>
+      <div>
+        <script>
+          document.write("This page was last modified on: " + document.lastModified)
+        </script>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
