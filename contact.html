@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Military Technology Evolution</title>
+    <title>Contact | Military Technology</title>
     <link rel="stylesheet" href="project.css">
 </head>
 
@@ -42,11 +42,10 @@
 
         <section class="contact-container">
 
-            <!-- FORM -->
             <div class="contact-form">
                 <h3>Send us a Message</h3>
 
-                <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+                <form method="post" action="https://webdevbasics.net/scripts/demo.php" onsubmit="return validateForm()">
 
                     <label for="First-Name">*First Name:</label>
                     <input type="text" id="First-Name" name="First-Name" required>
@@ -58,12 +57,12 @@
                     <input type="email" id="Email" name="Email" required>
 
                     <label for="Subject">Subject:</label>
-                    <input type="text" id="Subject" name="Subject">
+                    <input type="text" id="Subject" name="Subject" required>
 
                     <label for="Message">*Message:</label>
                     <textarea id="Message" name="Message" rows="4" required></textarea>
 
-                    <input type="submit" value="Submit">
+                    <button type="submit" class="btn">Submit</button>
 
                 </form>
             </div>
@@ -79,15 +78,10 @@
         </section>
 
     </main>
+    <script src="script.js"></script>
 
     <footer>
         <div class="footer-container">
-
-            <div class="footer-section">
-                <p><strong>About</strong></p>
-                <p><a href="index.html">Home</a></p>
-                <p><a href="timeline.html">About This Site</a></p>
-            </div>
 
             <div class="footer-section">
                 <p><strong>Quick Links</strong></p>
@@ -102,6 +96,12 @@
             </div>
 
             <div class="footer-section">
+                <p><strong>About</strong></p>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="timeline.html">About This Site</a></p>
+            </div>
+
+            <div class="footer-section">
                 <p><strong>Resources</strong></p>
                 <p><a href="resources.html">References</a></p>
                 <p><a href="mailto:ds00318@my.westga.edu">Contact Me</a></p>
@@ -112,6 +112,11 @@
         <div class="footer-copyright">
             <p>Copyright &copy; Devin Shipman</p>
             <p><a href="mailto:ds00318@my.westga.edu">ds00318@my.westga.edu</a></p>
+            <div>
+                <script>
+                    document.write("This page was last modified on: " + document.lastModified)
+                </script>
+            </div>
         </div>
     </footer>
 
