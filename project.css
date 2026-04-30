@@ -1,9 +1,9 @@
-/*Makes all elements use border-box so padding doesn't increase width*/
+/* BASE */
+
 * {
   box-sizing: border-box;
 }
 
-/* Basic page styling (font, background, center text) */
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin: 0;
@@ -11,7 +11,8 @@ body {
   background-color: #c4d3ea;
 }
 
-/*Header layout with logo and title centered*/
+/* HEADER */
+
 .top-header {
   display: flex;
   justify-content: center;
@@ -21,18 +22,17 @@ body {
   gap: 20px;
 }
 
-/* Logo size */
 .logo {
   width: 80px;
 }
 
-/* Website title styling */
 .site-title {
   margin: 0;
-  font-size: 28px;
+  font-size: clamp(20px, 4vw, 28px);
 }
 
-/* Navbar at the top of each webpage */
+/* NAVBAR */
+
 .navbar {
   list-style: none;
   margin: 0;
@@ -40,13 +40,11 @@ body {
   background: #000066;
 }
 
-/* Navigation list items displayed inline */
 .navbar li {
   display: inline;
   margin: 0 15px;
 }
 
-/* Navigation links styling */
 .navbar a {
   color: white;
   text-decoration: none;
@@ -54,12 +52,17 @@ body {
   padding: 8px;
 }
 
-/* Hover effect for nav links */
 .navbar a:hover {
   text-decoration: underline;
 }
 
-/* Hero section on the home page with background image and centered content */
+.navbar a:focus-visible {
+  outline: 3px solid #3399CC;
+  outline-offset: 2px;
+}
+
+/* HERO */
+
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url("images/hero_image1.jpg");
   background-position: center;
@@ -67,7 +70,7 @@ body {
   background-repeat: no-repeat;
 
   color: white;
-  min-height: 420px;
+  min-height: clamp(250px, 50vh, 420px);
 
   display: flex;
   flex-direction: column;
@@ -75,7 +78,8 @@ body {
   align-items: center;
 }
 
-/* Button styling */
+/* BUTTONS */
+
 .btn {
   display: inline-block;
   padding: 10px 25px;
@@ -86,27 +90,32 @@ body {
   border-radius: 5px;
 }
 
-/* Button hover effect */
 .btn:hover {
   background: white;
   color: #000066;
 }
 
-/* Descriptions  */
+.btn:focus-visible {
+  outline: 3px solid #3399CC;
+  outline-offset: 2px;
+}
+
+/* DESCRIPTION & SECTION TITLES */
+
 .description {
-  font-size: 18px;
+  font-size: 16px;
   width: 80%;
   margin: 20px auto;
 }
 
-/*  Styles the titles for each main content section */
 .section-title {
   font-size: 28px;
   margin: 30px 0 15px;
   color: #000066;
 }
 
-/*  Home page Learn sections */
+/* LEARN SECTION (HOME PAGE) */
+
 .learn-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -125,6 +134,7 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease;
 }
 
 .learn-card a {
@@ -148,10 +158,10 @@ body {
 
 .learn-card:hover {
   transform: translateY(-5px);
-  transition: 0.3s;
 }
 
-/* Content section on each webpage */
+/* CONTENT SECTION */
+
 .content-section {
   width: 100%;
   max-width: 1400px;
@@ -182,18 +192,15 @@ body {
   border-radius: 6px;
 }
 
-/* Left side image column */
 .image-column {
   width: 25%;
   display: flex;
   flex-direction: column;
   gap: 10px;
-
   justify-content: center;
   align-content: center;
 }
 
-/* Images */
 .image-column img {
   width: 100%;
   height: 160px;
@@ -211,12 +218,11 @@ body {
 }
 
 .content-card p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   margin-bottom: 12px;
 }
 
-/* Links */
 .content-card a {
   display: inline-block;
   margin-top: 10px;
@@ -228,7 +234,8 @@ body {
   text-decoration: underline;
 }
 
-/* Timeline */
+/* TIMELINE */
+
 .timeline {
   position: relative;
   width: 80%;
@@ -250,6 +257,7 @@ body {
   top: 0;
   bottom: 0;
   left: 38px;
+  z-index: 0;
 }
 
 .event {
@@ -268,6 +276,7 @@ body {
   border-radius: 50%;
   top: 30px;
   left: 33px;
+  z-index: 1;
 }
 
 .year {
@@ -275,10 +284,18 @@ body {
   color: #000066;
 }
 
-/* Table */
-table {
+/* TABLE */
+
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   width: 95%;
   margin: 30px auto;
+}
+
+.content-section table {
+  width: 100%;
+  margin: 0;
   border: 1px solid #3399CC;
   border-collapse: collapse;
   font-size: 14px;
@@ -291,39 +308,40 @@ caption {
   color: #000066;
 }
 
-td,
-th {
+.content-section td,
+.content-section th {
   padding: 10px;
   border: 1px solid #3399CC;
   vertical-align: top;
 }
 
-th {
+.content-section th {
   background-color: #000066;
   color: white;
   font-weight: bold;
 }
 
-td {
+.content-section td {
   text-align: left;
   background-color: #f8f8f8;
 }
 
-tr:nth-of-type(even) td {
+.content-section tr:nth-of-type(even) td {
   background-color: #DFEDF8;
 }
 
-td ul {
+.content-section td ul {
   margin: 0;
   padding-left: 20px;
 }
 
-td li {
+.content-section td li {
   margin: 3px 0;
   text-align: left;
 }
 
-/* CONTACT HERO */
+/* CONTACT */
+
 .contact-hero {
   background: linear-gradient(to right, #0a1a33, #1f3c88);
   color: white;
@@ -332,7 +350,7 @@ td li {
 }
 
 .contact-hero h2 {
-  font-size: 42px;
+  font-size: clamp(26px, 5vw, 42px);
   margin-bottom: 10px;
 }
 
@@ -340,7 +358,6 @@ td li {
   font-size: 18px;
 }
 
-/* CONTACT LAYOUT */
 .contact-container {
   display: flex;
   justify-content: center;
@@ -350,7 +367,6 @@ td li {
   flex-wrap: wrap;
 }
 
-/* FORM CARD */
 .contact-form {
   background: #e6e6e6;
   padding: 30px;
@@ -379,7 +395,6 @@ td li {
   border: 1px solid #ccc;
 }
 
-/* INFO CARD */
 .contact-info {
   background: rgba(255, 255, 255, 0.1);
   color: white;
@@ -408,7 +423,8 @@ td li {
   color: #000066;
 }
 
-/* REFERENCES PAGE */
+/* REFERENCES */
+
 .references-hero {
   background: linear-gradient(to right, #0b1a33, #1f3c88);
   color: white;
@@ -468,6 +484,8 @@ td li {
   text-decoration: underline;
 }
 
+/* VIDEO */
+
 .video-section {
   width: 100%;
   max-width: 1400px;
@@ -491,7 +509,8 @@ td li {
   border: none;
 }
 
-/* Footer */
+/* FOOTER */
+
 footer {
   background: #000066;
   color: white;
@@ -547,7 +566,8 @@ footer {
   text-decoration: underline;
 }
 
-/* Store Header */
+/* STORE HEADER */
+
 .store-header {
   background: linear-gradient(to right, #1e3c72, #2a5298);
   color: white;
@@ -557,6 +577,8 @@ footer {
 .store-header h2 {
   margin: 0;
 }
+
+/* FILTERS */
 
 .filters {
   padding: 20px;
@@ -572,7 +594,6 @@ footer {
   padding: 8px 15px;
   border: none;
   border-radius: 20px;
-  background: #eee;
 }
 
 .filters .active {
@@ -580,12 +601,14 @@ footer {
   color: white;
 }
 
-/* Product Grid */
+/* PRODUCT GRID */
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px;
+  align-items: stretch; 
 }
 
 .product-card {
@@ -593,6 +616,8 @@ footer {
   border-radius: 10px;
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;          
+  flex-direction: column; 
 }
 
 .product-card img {
@@ -606,11 +631,20 @@ footer {
   margin: 10px 0;
 }
 
+.product-card p {
+  flex: 1;    
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
+
 .price {
   display: block;
   color: #2a5298;
   font-weight: bold;
-  margin: 10px 0;
+  margin-top: auto; 
+  margin-bottom: 10px;
 }
 
 .product-card .btn {
@@ -627,7 +661,8 @@ footer {
   background: #1e3c72;
 }
 
-/* TABLET */
+/* RESPONSIVE — TABLET (max-width: 900px) */
+
 @media (max-width: 900px) {
 
   .learn-section {
@@ -677,14 +712,15 @@ footer {
   .timeline {
     width: 95%;
   }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
+/* RESPONSIVE — MOBILE */
 
-  .learn-section {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 600px) {
 
   body {
     font-size: 16px;
@@ -694,12 +730,12 @@ footer {
     flex-direction: column;
   }
 
-  .site-title {
-    font-size: 22px;
-  }
-
   .btn {
     width: 90%;
+  }
+
+  .learn-section {
+    grid-template-columns: 1fr;
   }
 
   .learn-card img {
@@ -717,9 +753,23 @@ footer {
   .event::after {
     left: 13px;
   }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .store-header {
+    padding: 25px 15px;
+  }
+
+  .filters {
+    padding: 15px 10px;
+  }
 }
 
-/* EXTRA SMALL */
+/* RESPONSIVE — EXTRA SMALL */
+
 @media (max-width: 400px) {
 
   .navbar li {
