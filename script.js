@@ -1,4 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+const links = document.querySelectorAll('.navbar a');
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+  links.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    }
+  });
+});
+
   const buttons = document.querySelectorAll(".filter-btn");
   const products = document.querySelectorAll(".product-card");
 
@@ -22,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-});
 
 // Alert on contact page load
 if (document.title.includes("Contact")) {
